@@ -151,6 +151,7 @@ Nvim by running `:help lspconfig-all`.
 - [koka](#koka)
 - [kotlin_language_server](#kotlin_language_server)
 - [kulala_ls](#kulala_ls)
+- [laravells](#laravells)
 - [lean3ls](#lean3ls)
 - [lelwel_ls](#lelwel_ls)
 - [lemminx](#lemminx)
@@ -4330,8 +4331,8 @@ Default config:
 - `init_options` :
   ```lua
   {
-    cache_path = "/home/runner/.cache/gitlab-ci-ls/",
-    log_path = "/home/runner/.cache/gitlab-ci-ls//log/gitlab-ci-ls.log"
+    cache_path = "/home/oze/.cache/gitlab-ci-ls/",
+    log_path = "/home/oze/.cache/gitlab-ci-ls//log/gitlab-ci-ls.log"
   }
   ```
 - `root_dir` source (use "gF" to open): [../lsp/gitlab_ci_ls.lua:14](../lsp/gitlab_ci_ls.lua#L14)
@@ -5396,7 +5397,7 @@ vim.lsp.enable('jdtls')
 Default config:
 - `cmd` :
   ```lua
-  { "jdtls", "-configuration", "/home/runner/.cache/jdtls/config", "-data", "/home/runner/.cache/jdtls/workspace" }
+  { "jdtls", "-configuration", "/home/oze/.cache/jdtls/config", "-data", "/home/oze/.cache/jdtls/workspace" }
   ```
 - `filetypes` :
   ```lua
@@ -5415,7 +5416,7 @@ Default config:
   ```lua
   {
     jvm_args = {},
-    workspace = "/home/runner/.cache/jdtls/workspace"
+    workspace = "/home/oze/.cache/jdtls/workspace"
   }
   ```
 - `root_markers` :
@@ -5775,6 +5776,34 @@ Default config:
   ```lua
   { ".git" }
   ```
+
+---
+
+## laravells
+
+https://github.com/laravel-ls/laravel-ls
+Laravel Language Server written in go.
+
+`laravel-ls` can be installed via `go install`:
+```sh
+go install github.com/laravel-ls/laravel-ls/cmd/laravel-ls@latest
+```
+
+Snippet to enable the language server:
+```lua
+vim.lsp.enable('laravells')
+```
+
+Default config:
+- `cmd` :
+  ```lua
+  { "laravel-ls" }
+  ```
+- `filetypes` :
+  ```lua
+  { "php", "blade" }
+  ```
+- `root_dir` source (use "gF" to open): [../lsp/laravells.lua:13](../lsp/laravells.lua#L13)
 
 ---
 
